@@ -1,0 +1,154 @@
+<div class="formContainer">
+    <h2 appDnd class="formTitle">distributor registracion form</h2>
+
+
+
+    <form (ngSubmit)=addInfo() [formGroup]="distributorRegistracionForm">
+
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Surename</mat-label>
+            <input matInput formControlName="sureName">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="example-form-field">
+            <mat-label>Birth day</mat-label>
+            <input matInput formControlName="birthday" [matDatepicker]="datepicker">
+            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker>
+                <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                </mat-datepicker-actions>
+            </mat-datepicker>
+        </mat-form-field>
+
+
+        <div class="gender">
+            <h4>gender:</h4>
+            <mat-radio-group aria-label="Select an option" formControlName="gender">
+                <mat-radio-button  value="male" >Male</mat-radio-button>
+                <mat-radio-button  class="female" value="female">Female</mat-radio-button>
+            </mat-radio-group>
+
+        </div>
+
+        <div class="pasportType">
+            <h4>document type:</h4>
+            <mat-radio-group aria-label="Select an option" formControlName="identificationDoc">
+                <mat-radio-button value="IDcard">ID card</mat-radio-button>
+                <mat-radio-button class="passport " value="Passport">Passport</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <mat-form-field class="docSeries" appearance="fill">
+            <mat-label>Doc Series:</mat-label>
+            <input matInput formControlName="docSeries">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Doc No:</mat-label>
+            <input matInput formControlName="docNo">
+        </mat-form-field>
+
+
+
+        <mat-form-field appearance="fill" class="example-form-field">
+            <mat-label>Enter Doc Date of Expiry</mat-label>
+            <mat-date-range-input [rangePicker]="rangePicker">
+                <input matStartDate placeholder="Start date" formControlName="dateOfIssue">
+                <input matEndDate placeholder="End date" formControlName="dateOfExpiry">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+            <mat-date-range-picker #rangePicker>
+                <mat-date-range-picker-actions>
+                    <button mat-button matDateRangePickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDateRangePickerApply>Apply</button>
+                </mat-date-range-picker-actions>
+            </mat-date-range-picker>
+        </mat-form-field>
+
+       
+
+        <mat-form-field appearance="fill">
+            <mat-label>personal no</mat-label>
+            <input matInput formControlName="personalNo">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>issuing authority</mat-label>
+            <input matInput formControlName="issuingAuth">
+        </mat-form-field>
+
+
+        <h4>Contact Types:</h4>
+        <p>
+            <mat-checkbox (change)="showPhone($event)" formControlName="phone">Phone</mat-checkbox>
+        </p>
+
+
+        <input [hidden]="isHiddenPhone" type="text" formControlName="phone">
+
+
+        <p>
+            <mat-checkbox (change)="showMobile($event)" formControlName="mobile">Mobile Phone</mat-checkbox>
+        </p>
+        <input [hidden]="isHiddenMobile" formControlName="mobile" type="text">
+        <p>
+            <mat-checkbox (change)="showEmail($event)" formControlName="email">Email</mat-checkbox>
+        </p>
+        <input [hidden]="isHiddenEmail" type="text" formControlName="email">
+        <p>
+            <mat-checkbox (change)="showFax($event)" formControlName="fax">Fax</mat-checkbox>
+        </p>
+        <input [hidden]="isHiddenFax" type="text" formControlName="fax">
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Contact Info</mat-label>
+            <input matInput formControlName="contactInfo">
+        </mat-form-field>
+
+        <mat-radio-group aria-label="Select an option" formControlName="addressType">
+            <mat-radio-button value="ActualAddress">Actual Address</mat-radio-button>
+            <mat-radio-button class="legalAddress" value="LegalAddress">Legal Address</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-form-field class="address" appearance="fill">
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="address">
+        </mat-form-field>
+
+        <h4>Do you have a recommender?</h4>
+        <p>
+            <mat-checkbox (change)="showIdentity($event)" formControlName="hasRecommender">Yes</mat-checkbox>
+
+        </p>
+
+        <div [hidden]="IsIdentityShow">
+            <mat-form-field class="name" appearance="fill">
+                <mat-label>choose Recommender</mat-label>
+                <mat-select formControlName="recomendatorPersonalNo" #recomendatorPersonalNo>
+                    <mat-option *ngFor="let Personalnumber of paint;" [value]="Personalnumber">
+                        ID: {{Personalnumber}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+        </div>
+
+
+        <div>
+            <h4>upload your foto:</h4>
+
+            <input formControlName="fotoUpload" class="uploadFoto" type="file">
+        </div>
+ 
+        <button     [disabled]="distributorRegistracionForm.invalid"      class="applyBtn" mat-flat-button
+            color="primary">Apply</button>
+    </form>
+</div>

@@ -1,0 +1,44 @@
+<h2 appDnd class="title">Products Registration</h2>
+
+<div class="formContainer">
+    <form (ngSubmit)=addProduct() [formGroup]="productForm">
+        <mat-form-field appearance="fill">
+            <mat-label>product code</mat-label>
+            <input matInput formControlName="productCode">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>product name</mat-label>
+            <input matInput formControlName="productName">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>product price per unit</mat-label>
+            <input matInput formControlName="productPrice">
+        </mat-form-field>
+        <button [disabled]="productForm.invalid" mat-flat-button color="primary">add product</button>
+    </form>
+</div>
+
+
+
+
+<h2 appDnd class="title">products</h2>
+
+<div class="productsContainer">
+    <div class="addedProducts" *ngFor="let pro of (product$|async) ">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title> product code: {{pro.productCode}}</mat-card-title>
+                <mat-card-subtitle> product name: {{pro.productName}}</mat-card-subtitle>
+                <mat-card-subtitle> product price: {{pro.productPrice}}</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+    </div>
+
+
+
+
+
+</div>
+

@@ -1,0 +1,199 @@
+{
+  "products": [
+    {
+      "productCode": "001",
+      "productName": "ყავა",
+      "productPrice": "10",
+      "id": 1
+    },
+    {
+      "productCode": "002",
+      "productName": "ჩაი",
+      "productPrice": "20",
+      "id": 2
+    },
+    {
+      "productCode": "003",
+      "productName": "სიგარეტი",
+      "productPrice": "15",
+      "id": 3
+    },
+    {
+      "productCode": "45",
+      "productName": "45",
+      "productPrice": "454",
+      "id": 4
+    }
+  ],
+  "distrSales": [
+    {
+      "distributorId": "1",
+      "distributorName": "ლევან",
+      "distributorSurename": "დოლიძე",
+      "saleDate": "2021-08-10",
+      "saleDateForRange": "2021-08-09T20:00:00.000Z",
+      "Pname": "ყავა",
+      "Pcode": "001",
+      "soldPoductQty": "5",
+      "soldProductUnitPrice": "10",
+      "soldProductTotalPrice": 50,
+      "bonus": 5,
+      "id": 1
+    },
+    {
+      "distributorId": "2",
+      "distributorName": "2",
+      "distributorSurename": "2",
+      "saleDate": "2021-10-19",
+      "saleDateForRange": "2021-10-18T20:00:00.000Z",
+      "Pname": "ყავა",
+      "Pcode": "001",
+      "soldPoductQty": "5",
+      "soldProductUnitPrice": "14",
+      "soldProductTotalPrice": 70,
+      "bonus": 7,
+      "id": 3
+    }
+  ],
+  "productCodsAndNames": [
+    {
+      "productCode": "001",
+      "productName": "ყავა"
+    },
+    {
+      "productCode": "002",
+      "productName": "ჩაი"
+    },
+    {
+      "productCode": "003",
+      "productName": "სიგარეტი"
+    }
+  ],
+  "distributors": [
+    {
+      "name": "ლევან",
+      "lastname": "დოლიძე",
+      "date": "2021-10-06T20:00:00.000Z",
+      "gender": "male",
+      "identificationDoc": "Passport",
+      "identificationDocSeries": "454",
+      "identificationDocNumber": "54545",
+      "dateOfIssue": "2021-10-03T20:00:00.000Z",
+      "dateOfExpiry": "2021-10-20T20:00:00.000Z",
+      "IDnumber": "78787",
+      "issuingAuthority": "54545",
+      "contactInfo": "78787",
+      "addressType": "ActualAddress",
+      "address": "ერისთავის ქ 5 ",
+      "hasRecommender": false,
+      "protegePersonalNo": [
+        3,
+        4,
+        5
+      ],
+      "fotoUpload": null,
+      "id": 1
+    },
+    {
+      "name": null,
+      "lastname": null,
+      "date": null,
+      "gender": null,
+      "identificationDoc": null,
+      "identificationDocSeries": null,
+      "identificationDocNumber": null,
+      "dateOfIssue": null,
+      "dateOfExpiry": null,
+      "IDnumber": null,
+      "phone": null,
+      "mobile": null,
+      "email": null,
+      "fax": null,
+      "issuingAuthority": null,
+      "contactInfo": null,
+      "addressType": null,
+      "address": null,
+      "hasRecommender": null,
+      "protegePersonalNo": [],
+      "fotoUpload": null,
+      "id": 2
+    },
+    {
+      "name": "787",
+      "lastname": "87878",
+      "date": "2021-10-06T20:00:00.000Z",
+      "gender": "male",
+      "identificationDoc": "IDcard",
+      "identificationDocSeries": "2",
+      "identificationDocNumber": "2",
+      "dateOfIssue": "2021-10-11T20:00:00.000Z",
+      "dateOfExpiry": "2021-10-21T20:00:00.000Z",
+      "IDnumber": "2",
+      "phone": "591880233",
+      "mobile": false,
+      "email": null,
+      "fax": null,
+      "issuingAuthority": "sasa",
+      "contactInfo": "5",
+      "addressType": "ActualAddress",
+      "address": "14",
+      "hasRecommender": true,
+      "recomendatorPersonalNo": 1,
+      "protegePersonalNo": [],
+      "fotoUpload": null,
+      "id": 3
+    },
+    {
+      "name": "787",
+      "lastname": "87878",
+      "date": "2021-10-06T20:00:00.000Z",
+      "gender": "male",
+      "identificationDoc": "IDcard",
+      "identificationDocSeries": "2",
+      "identificationDocNumber": "2",
+      "dateOfIssue": "2021-10-11T20:00:00.000Z",
+      "dateOfExpiry": "2021-10-21T20:00:00.000Z",
+      "IDnumber": "2",
+      "phone": "591880233",
+      "mobile": false,
+      "email": null,
+      "fax": null,
+      "issuingAuthority": "sasa",
+      "contactInfo": "5",
+      "addressType": "ActualAddress",
+      "address": "14",
+      "hasRecommender": true,
+      "recomendatorPersonalNo": 1,
+      "protegePersonalNo": [],
+      "fotoUpload": null,
+      "id": 4
+    },
+    {
+      "name": "787",
+      "lastname": "87878",
+      "date": "2021-10-06T20:00:00.000Z",
+      "gender": "male",
+      "identificationDoc": "IDcard",
+      "identificationDocSeries": "2",
+      "identificationDocNumber": "2",
+      "dateOfIssue": "2021-10-11T20:00:00.000Z",
+      "dateOfExpiry": "2021-10-21T20:00:00.000Z",
+      "IDnumber": "2",
+      "phone": "591880233",
+      "mobile": false,
+      "email": null,
+      "fax": null,
+      "issuingAuthority": "sasa",
+      "contactInfo": "5",
+      "addressType": "ActualAddress",
+      "address": "14",
+      "hasRecommender": true,
+      "recomendatorPersonalNo": 1,
+      "protegePersonalNo": [],
+      "fotoUpload": null,
+      "id": 5
+    }
+  ],
+  "DistributorsIdentity": [],
+  "Portfolio": []
+}

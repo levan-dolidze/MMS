@@ -1,0 +1,69 @@
+<h2 appDnd class="title">bonus</h2>
+<div class="mainDiv">
+  <div class="searchInputDiv">
+    <div>
+
+      <form (ngSubmit)="searchByRange()" [formGroup]="rangeForm">
+        <mat-form-field class="range" appearance="fill">
+          <mat-label>Enter a date range</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Start date" formControlName="start">
+            <input matEndDate placeholder="End date" formControlName="end">
+          </mat-date-range-input>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+        <button [disabled]="rangeForm.invalid" mat-raised-button color="primary">search by date</button>
+      </form>
+
+    </div>
+    <div class="searchByNameDiv">
+      <mat-form-field class="searchByName" appearance="fill">
+        <mat-label>search by name</mat-label>
+        <input matInput (change)="searchByname($event)" ngModel>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="searchBySurename" appearance="fill">
+        <mat-label>search by surename</mat-label>
+        <input matInput (change)="searchBySurename($event)" ngModel>
+      </mat-form-field>
+
+    </div>
+    <div class="btn">
+      <button class="min" (click)="searchMinBonus()" mat-raised-button color="primary">min</button>
+      <button class="max" (click)="searchMaxBonus()" mat-raised-button color="primary">max</button>
+    </div>
+
+  </div>
+  <div class="tableDiv">
+
+    <table>
+
+
+      <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>surename</th>
+        <th>sale date</th>
+        <th>total sale amount</th>
+        <th>bonus</th>
+
+      </thead>
+      <tbody *ngFor="let data of salesInfo; let i =index">
+        <th>{{data.distributorId}}</th>
+        <th>{{data.distributorName}}</th>
+        <th>{{data.distributorSurename}}</th>
+        <th>{{data.saleDate}}</th>
+        <th>{{data.soldProductTotalPrice}} </th>
+        <th>{{data.bonus+bonusFromProtege}}</th>
+      </tbody>
+    
+    </table>
+  </div>
+
+
+</div>
+
+
+<div class="countBtn"><button (click)="countBonus()" mat-raised-button color="primary">count bonus</button></div>

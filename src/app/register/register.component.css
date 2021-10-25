@@ -1,0 +1,28 @@
+.formContainer{
+    margin:0 auto;
+    width: 400px;
+    margin-top: 20px;
+    
+    }
+    
+    .mat-flat-button{
+        width: 100%;
+    }
+    .mat-form-field{
+        width: 100%;
+    }
+    .formTitle{
+      text-align: center;
+margin-top: 20px;
+    }
+    .legalAddress,.female,.passport{
+        margin-left: 10px;
+    }
+    .address,.docSeries{
+        margin-top: 15px;
+    }
+   .pasportType,.applyBtn{
+        margin-top: 10px;
+    }
+
+  

@@ -1,0 +1,118 @@
+<main>
+  <h2 appDnd class="title">Sales Info</h2>
+  
+  <div class="formContainer">
+    <form (ngSubmit)=addInfo() [formGroup]="salesInfoForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Distributor ID</mat-label>
+        <input matInput formControlName="distributorId">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Distributor name</mat-label>
+        <input matInput formControlName="distributorName">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Distributor surename</mat-label>
+        <input matInput formControlName="distributorSurename">
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill" class="example-form-field">
+        <mat-label>Choose a date</mat-label>
+        <input matInput formControlName="saleDate" [matDatepicker]="datepicker">
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancel</button>
+            <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+      </mat-form-field>
+
+
+
+      <span id="productNameAndCodeCont">
+
+        <mat-form-field class="name" appearance="fill">
+          <mat-label>Product</mat-label>
+          <mat-select [disabled]="disableSelect.value" formControlName="Pname" #Pname  >
+            <mat-option *ngFor="let name of Pnames;" [value]="name">{{name}}</mat-option>
+
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="code" appearance="fill">
+          <mat-label>Code</mat-label>
+          <mat-select [disabled]="disableSelect.value" formControlName="Pcode"#Pcode>
+            <mat-option *ngFor="let code of Pcodes;" [value]="code">{{code}}</mat-option>
+
+          </mat-select>
+        </mat-form-field>
+
+
+
+      </span>
+
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>sold Product Qty</mat-label>
+        <input matInput formControlName="soldPoductQty">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Sold Product Unit Price</mat-label>
+        <input matInput formControlName="soldProductUnitPrice">
+      </mat-form-field>
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>Sold Products Total price</mat-label>
+        <input matInput formControlName="soldProductTotalPrice">
+      </mat-form-field> -->
+
+
+      <button [disabled]="salesInfoForm.invalid" mat-flat-button color="primary">Add Sales Info</button>
+    </form>
+  </div>
+
+  <button class="showTableBtn" (click)="showInfo()" mat-stroked-button color="primary">{{isHiddenBtn}}</button>
+  
+  <div class="searchDiv">
+  <mat-form-field class="searchDist" appearance="fill">
+    <mat-label>search by distributor</mat-label>
+    <input matInput  (change)="searchByDistrId($event)"  ngModel>
+  </mat-form-field>
+  <mat-form-field class="searchProduct" appearance="fill">
+    <mat-label>search by product</mat-label>
+    <input matInput  (change)="searchByProductCode($event)"  ngModel>
+  </mat-form-field>
+ 
+  <mat-form-field  class="example-full-width" appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" (dateInput)="searchByhDate($event)" ngModel>
+    <mat-datepicker-toggle matSuffix [for]="picker">
+
+    </mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+
+
+  <table class="salesInfoTable" [hidden]="isHidden">
+    <tr class="TableTr">
+      <th *ngFor="let colum of displayedColumns">
+        {{colum}}
+      </th>
+    </tr>
+
+    <tr class="TableTr" *ngFor="let row of distrSaleInfo">
+      <td *ngFor="let colum of displayedColumns">
+        {{row[colum]}}
+      </td>
+    </tr>
+  </table>
+
+</main>
+
+

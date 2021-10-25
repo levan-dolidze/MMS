@@ -1,0 +1,58 @@
+<h2 appDnd class="title">distributor list</h2>
+<span class="editBtn"><button (click)="editData()" mat-stroked-button color="primary">{{editBtnMode}}</button><span>
+
+<div class="mainContainer">
+
+    <div [hidden]="IseditDivHidden" class="addedProducts" *ngFor="let list of distributorList ; let i =index ">
+        
+  
+        <div class="cardDiv">
+        <mat-card class="example-card">
+            <div mat-card-avatar class="example-header-image"></div>
+            <h4> ID: {{list.id}}</h4>
+            <h3>name: {{list.name}}</h3>
+            <h3>surename: {{list.lastname}}</h3>     
+            <h4> PN: {{list.IDnumber}}</h4>
+            <h4>birth day: {{list.date|date}}</h4>
+            <h4>gender:{{list.gender}}</h4>
+            <h4>identification document info:</h4>
+            <li>type:{{list.identificationDoc}}</li>
+            <li>number:{{list.identificationDocNumber}}</li>
+            <li>date of issue:{{list.dateOfIssue|date}}</li>
+            <li>date of expiry:{{list.dateOfExpiry|date}}</li>
+            <p> addres: {{list.address}}</p>
+     
+
+            <button (click)="deleteData(list.id)" mat-button>DELETE</button>
+
+        </mat-card>
+
+    </div>
+    </div>
+
+
+
+
+    <div [hidden]="editDivHidden" class="addedProducts" *ngFor="let list of distributorList;let i = index ">
+        <div class="cardDiv">
+        <mat-card class="example-card">
+
+            <div mat-card-avatar class="example-header-image"></div>
+            <h4> ID: {{list.id}}</h4>
+            <input class="inputs" type="text" [(ngModel)]="list.name"  >
+            <input class="inputs" type="text" [(ngModel)]="list.lastname"  >
+            <input class="inputs" type="text"  [(ngModel)]="list.IDnumber">
+            <input class="inputs" type="text"  [(ngModel)]="list.date">
+            <input class="inputs" type="text"  [(ngModel)]="list.gender">
+            <input class="inputs" type="text"  [(ngModel)]="list.identificationDoc">
+            <input class="inputs" type="text"  [(ngModel)]="list.identificationDocNumber">
+            <input class="inputs" type="text"  [(ngModel)]="list.dateOfIssue">
+            <input class="inputs" type="text"  [(ngModel)]="list.dateOfExpiry">
+            <input class="inputs" type="text"  [(ngModel)]="list.address">
+    
+
+        </mat-card>
+    </div>
+    </div>
+
+</div>

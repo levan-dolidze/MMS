@@ -1,0 +1,25 @@
+.title{
+    margin-top: 20px;
+    text-align: center;
+}
+.example-card{
+    width: 200px;
+
+    padding: 20px;
+    margin-left: 20px;
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.inputs{
+    margin-top: 15px;
+}
+.editBtn{
+    margin-left: 20px;
+}
+.cardDiv{
+    margin-top: 20px;
+}

@@ -1,0 +1,70 @@
+
+#productNameAndCodeCont{
+    display: flex;
+
+ 
+}
+main{
+    height: 1500px;
+}
+#productNameAndCodeCont{
+    width: 50%;
+}
+.formContainer{
+    margin:0 auto;
+    width: 250px;
+    margin-top: 50px;
+    
+    }
+    
+    .mat-flat-button{
+        width: 100%;
+    }
+
+    .title{
+       text-align: center;
+       margin-top: 20px;
+    }
+    .mat-form-field{
+width: 100%;
+    }
+
+    
+    .addedProducts{
+    
+        margin:20px 0px 0px 20px
+    }
+    .showTableBtn{
+        margin-left: 20px;
+    }
+
+    table {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+.TableTr{
+    /* width: 50px; */
+    text-align: center;
+}
+
+.TableTr th{
+    border:1px solid white;
+    padding: 6px;
+    text-align: center;  
+}
+.TableTr td:nth-child(even){
+    background-color:#cccccc ;
+}
+.TableTr td:hover{
+    background-color: rgb(141, 138, 133);
+    color:black;
+
+}
+.searchDist,.example-full-width,.searchProduct{
+    width: 150px;
+}
+.searchDiv{
+   display: flex;
+   justify-content: center;
+}

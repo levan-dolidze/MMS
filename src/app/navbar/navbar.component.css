@@ -1,0 +1,24 @@
+
+.mainConteiner{
+    width: 100%;
+}
+.routerLinkCont{
+    background-color: rgb(167, 32, 32);
+    padding: 30px;
+}
+a{
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.router-link-active{
+    background-color: rgb(236, 16, 16);
+    padding: 10px;
+}
+.authButtons,.logout{
+    float:right;
+    margin-right: 20px;
+
+}

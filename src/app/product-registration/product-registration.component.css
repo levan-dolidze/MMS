@@ -1,0 +1,26 @@
+.formContainer{
+margin:0 auto;
+width: 200px;
+margin-top: 20px;
+
+}
+
+.mat-flat-button{
+    width: 100%;
+}
+.title{
+ text-align: center;
+ margin-top: 20px;
+}
+
+.addedProducts{
+
+    margin:20px 0px 0px 20px
+}
+
+  .productsContainer{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    
+  }

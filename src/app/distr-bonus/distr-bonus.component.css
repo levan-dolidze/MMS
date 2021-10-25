@@ -1,0 +1,51 @@
+.title{
+    text-align: center;
+    margin-top: 20px;
+}
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+td,th{
+    border: 1px solid white;
+    padding: 10px;
+}
+th{
+    font-weight: bold;
+ 
+}
+th:nth-child(even){
+    background-color: #dddddd;
+}
+th:hover{
+    background-color: rgb(141, 138, 133);
+    
+}
+.mainDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.searchInputDiv{
+    margin-right: 50px;
+}
+.countBtn{
+    width: 100%;
+text-align: center;
+margin-top: 30px;
+}
+.searchInputDiv{
+    width: 250px;
+
+}
+.searchByName,.searchBySurename,.range{
+    width: 100%;
+}
+.max{
+    margin-left: 15px;
+}
+.searchByNameDiv{
+    margin-top: 15px;
+}
