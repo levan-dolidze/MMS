@@ -87,9 +87,6 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
     });
 
-
-
-
     const newDistributor: distributorRegistracionModel = {
       name: this.distributorRegistracionForm.get('name').value,
       lastname: this.distributorRegistracionForm.get('sureName').value,
@@ -152,7 +149,6 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
   filtredIdNumbers(): any {
     const filtredLength = this.recommendatorList.filter((item) => {
-
       return item.protegePersonalNo.length < 3;
 
     })
@@ -169,14 +165,8 @@ export class RegisterComponent implements OnInit, OnDestroy {
   getRegistrDistrIDnumber(): any {
 
     const find = this.recommendatorList.find((item) => {
-
       return item.id === this.distributorRegistracionForm.get('recomendatorPersonalNo').value;
     });
-    // const getId = this.recommendatorList.map((item) => {
-    //   return item.id;
-    // });
-
-    // const newProtege = getId.length + 1
 
     if (find) {
 
@@ -185,7 +175,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
         const findId = this.recommendatorList.map((item) => {
           return item.id
-        })
+        });
         let lastId = findId.pop();
         find.protegePersonalNo.push(lastId);
         this.distributorService.editDistributorProtegeInfo(find).subscribe(() => {

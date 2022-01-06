@@ -114,7 +114,9 @@
       "addressType": null,
       "address": null,
       "hasRecommender": null,
-      "protegePersonalNo": [],
+      "protegePersonalNo": [
+        6
+      ],
       "fotoUpload": null,
       "id": 2
     },
@@ -192,6 +194,31 @@
       "protegePersonalNo": [],
       "fotoUpload": null,
       "id": 5
+    },
+    {
+      "name": "78",
+      "lastname": "787",
+      "date": "2021-12-01T20:00:00.000Z",
+      "gender": "male",
+      "identificationDoc": "IDcard",
+      "identificationDocSeries": "sasa",
+      "identificationDocNumber": "sasa",
+      "dateOfIssue": "2021-12-07T20:00:00.000Z",
+      "dateOfExpiry": "2021-12-16T20:00:00.000Z",
+      "IDnumber": "8884",
+      "phone": "sa",
+      "mobile": null,
+      "email": null,
+      "fax": null,
+      "issuingAuthority": "54512",
+      "contactInfo": "7878",
+      "addressType": "ActualAddress",
+      "address": "78",
+      "hasRecommender": true,
+      "recomendatorPersonalNo": 2,
+      "protegePersonalNo": [],
+      "fotoUpload": "C:\\fakepath\\mari pass.JPG",
+      "id": 6
     }
   ],
   "DistributorsIdentity": [],

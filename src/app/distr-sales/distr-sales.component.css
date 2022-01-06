@@ -1,15 +1,13 @@
 
 #productNameAndCodeCont{
     display: flex;
-
+    width: 50%;
  
 }
 main{
     height: 1500px;
 }
-#productNameAndCodeCont{
-    width: 50%;
-}
+
 .formContainer{
     margin:0 auto;
     width: 250px;
